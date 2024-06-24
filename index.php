@@ -54,14 +54,14 @@
             </div>
         </div>
 
-        <div class="carousel-btns">
+        <!-- <div class="carousel-btns">
             <button id="leftArr">
                 <img src="images/left-arrow.svg" alt="left-arr">
             </button>
             <button id="rightArr">
                 <img style="rotate: 180deg" src="images/left-arrow.svg" alt="right-arr">
             </button>
-        </div>
+        </div> -->
     </section>
 
     <section id="examples">
