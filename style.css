@@ -7,6 +7,25 @@ body{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.crud-btn{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 6rem;
+    height: 2.5rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
 .carousel{
     width: 100%;
     margin-bottom: 2rem;

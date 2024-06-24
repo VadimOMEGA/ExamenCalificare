@@ -8,6 +8,11 @@
     <script src="script.js?v=<?php echo time(); ?>" defer></script>
 </head>
 <body>
+
+    <a href="crud.php">
+        <div class="crud-btn"><span>CRUD</span></div>
+    </a>
+
     <header>
         <nav>
             
@@ -21,28 +26,30 @@
             <div class="carousel-container" id="carouselContainer">
                 <?php
                     include('connection.php');
-                    // // SQL query to select all data from the table
-                    // $sql = "SELECT * FROM methodics";
-                    // $result = $conn->query($sql);
+                    // SQL query to select all data from the table
+                    $sql = "SELECT * FROM methodics";
+                    $result = $conn->query($sql);
 
-                    // if ($result->num_rows > 0) {
-                    //     // Output data of each row
-                    //     while($row = $result->fetch_assoc()) {
-                    //         echo <<<TXT
+                    if ($result->num_rows > 0) {
+                        // Output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo <<<TXT
 
-                    //             <div class="carousel-item">
-                    //                 <img src="{$row['image_url']}" alt="image" />
-                    //                 <div class="carousel-item-text">
-                    //                     <p class="carousel-item-title">{$row['title']}</p>
-                    //                     <p class="carousel-item-description">{$row['text']}</p>
-                    //                 </div>
-                    //             </div>
+                                <div class="carousel-item">
+                                    <img src="{$row['image_url']}" alt="image" />
+                                    <div class="carousel-item-text">
+                                        <p class="carousel-item-title">{$row['title']}</p>
+                                        <p class="carousel-item-description">{$row['text']}</p>
+                                    </div>
+                                </div>
 
-                    //         TXT;
-                    //     }
-                    // } else {
-                    //     echo "0 results";
-                    // }
+                            TXT;
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+
+                    $conn->close()
                 ?>
             </div>
         </div>
