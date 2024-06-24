@@ -25,42 +25,42 @@
         <div class="carousel" id="carousel">
             <div class="carousel-container" id="carouselContainer">
                 <?php
-                    include('connection.php');
-                    // SQL query to select all data from the table
-                    $sql = "SELECT * FROM methodics";
-                    $result = $conn->query($sql);
+                    // include('connection.php');
+                    // // SQL query to select all data from the table
+                    // $sql = "SELECT * FROM methodics";
+                    // $result = $conn->query($sql);
 
-                    if ($result->num_rows > 0) {
-                        // Output data of each row
-                        while($row = $result->fetch_assoc()) {
-                            echo <<<TXT
+                    // if ($result->num_rows > 0) {
+                    //     // Output data of each row
+                    //     while($row = $result->fetch_assoc()) {
+                    //         echo <<<TXT
 
-                                <div class="carousel-item">
-                                    <img src="{$row['image_url']}" alt="image" />
-                                    <div class="carousel-item-text">
-                                        <p class="carousel-item-title">{$row['title']}</p>
-                                        <p class="carousel-item-description">{$row['text']}</p>
-                                    </div>
-                                </div>
+                    //             <div class="carousel-item">
+                    //                 <img src="{$row['image_url']}" alt="image" />
+                    //                 <div class="carousel-item-text">
+                    //                     <p class="carousel-item-title">{$row['title']}</p>
+                    //                     <p class="carousel-item-description">{$row['text']}</p>
+                    //                 </div>
+                    //             </div>
 
-                            TXT;
-                        }
-                    } else {
-                        echo "0 results";
-                    }
+                    //         TXT;
+                    //     }
+                    // } else {
+                    //     echo "0 results";
+                    // }
 
-                    $conn->close()
+                    // $conn->close()
                 ?>
             </div>
         </div>
 
         <div class="carousel-btns">
-            <!-- <button id="leftArr">
+            <button id="leftArr">
                 <img src="images/left-arrow.svg" alt="left-arr">
             </button>
             <button id="rightArr">
                 <img style="rotate: 180deg" src="images/left-arrow.svg" alt="right-arr">
-            </button> -->
+            </button>
         </div>
     </section>
 

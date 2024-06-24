@@ -48,6 +48,7 @@
 
         echo "</table>";
         echo "<div style='margin-top: 2rem;'><a style='color: black;' href='create.php'>Adăugare înregistrare</a></div>";
+        echo "<div style='margin-top: 2rem;'><a style='color: black;' href='index.php'>Acasă</a></div>";
 
         $conn->close();
     ?>
